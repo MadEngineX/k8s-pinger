@@ -24,5 +24,5 @@ In my case (i use helm/kube-prometheus-stack) i've added this lane in values.yam
     - --collector.textfile.directory=/host/textfile`
 
 
-![Dashboard](https://drive.google.com/file/d/1WaQKcjyhLN-JXQhQeMo9F6blmhWRcy3J/view?usp=sharing)
-![](https://drive.google.com/file/d/1WaQKcjyhLN-JXQhQeMo9F6blmhWRcy3J/view?usp=sharing)
+Dashboard
+https://drive.google.com/file/d/1WaQKcjyhLN-JXQhQeMo9F6blmhWRcy3J/view?usp=sharing
