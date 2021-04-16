@@ -19,6 +19,6 @@ entries:
     name: k8s-pinger
     type: application
     urls:
-    - https://madenginex.github.io/k8s-pinger/k8s-pinger-for-github/k8s-pinger-0.1.0.tgz
+    - https://madenginex.github.io/k8s-pinger/k8s-pinger-0.1.0.tgz
     version: 0.1.0
 generated: "2021-04-16T19:13:48.6885672+03:00"
