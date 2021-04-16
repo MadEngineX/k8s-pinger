@@ -1,3 +1,69 @@
 apiVersion: v1
-entries: {}
-generated: "2021-04-16T18:41:48.6452549+03:00"
+entries:
+  k8s-pinger:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-04-16T18:55:57.6878081+03:00"
+    description: A Helm chart for Kubernetes
+    digest: b46004338f0abf7bf31e20d2ba81d7083f103204b792768d2fa8c5ec049389d9
+    name: k8s-pinger
+    type: application
+    urls:
+    - https://madenginex.github.io/k8s-pinger/k8s-pinger-0.1.0.tgz
+    version: 0.1.0
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.44.0
+    created: "2021-04-16T18:55:57.7383484+03:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://charts.helm.sh/stable
+      version: 2.9.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 5.8.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 60df9404c50dff0615cd22ce7bd33e2286316a485ddb46b72dd1f7b06446b735
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: vsliouniaev
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://madenginex.github.io/k8s-pinger/kube-prometheus-stack-12.8.0.tgz
+    version: 12.8.0
+generated: "2021-04-16T18:55:57.6810281+03:00"
