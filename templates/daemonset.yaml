@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  updateStrategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      name: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        name: {{ .Release.Name }}
+    spec:
+      terminationGracePeriodSeconds: 0
+      tolerations:
+      - operator: "Exists"
+      hostNetwork: true
+      serviceAccountName: {{ .Release.Name }}
+      priorityClassName: cluster-low
+      imagePullSecrets:
+{{ toYaml .Values.image.pullSecrets | indent 8 }}
+      containers:
+        - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy:  {{ .Values.image.pullPolicy }}
+          name: {{ .Chart.Name }}
+          env:
+          - name: MY_NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: PROMETHEUS_TEXTFILE_DIR
+            value: /node-exporter-textfile/
+          - name: PROMETHEUS_TEXTFILE_PREFIX
+            value: node-ping_
+          volumeMounts:
+            - name: textfile
+              mountPath: /node-exporter-textfile
+            - name: config
+              mountPath: /config
+      volumes:
+        - name: textfile
+          hostPath:
+            path: /var/run/node-exporter-textfile
+        - name: config
+          configMap:
+            name: {{ .Chart.Name }}-config

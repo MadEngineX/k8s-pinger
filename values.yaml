@@ -1,0 +1,36 @@
+
+image:
+  repository: harbor.mybank/library/pinger
+  tag: v0.3
+  pullPolicy: IfNotPresent
+  pullSecrets: 
+   - name: regcred
+
+serviceAccount:
+  create: true
+priorityClass:  
+  create: true
+clusterRole:
+  create: true
+clusterRoleBinding:
+  create: true  
+
+targets: 
+  cluster_targets:
+  - ipAddress: 10.10.170.91
+    name: k8s-test-m1.mybank
+  - ipAddress: 10.10.170.92
+    name: k8s-test-m2.mybank
+  - ipAddress: 10.10.170.93
+    name: k8s-test-m3.mybank
+  - ipAddress: 10.10.170.11
+    name: k8s-test-w1.mybank
+  - ipAddress: 10.10.44.20
+    name: esb(44.20)
+  - ipAddress: 10.10.44.21
+    name: esb(44.21)
+  - ipAddress: 10.10.44.22
+    name: esb(44.22)
+  external_targets:
+  - host: github.com
+    name: github  
