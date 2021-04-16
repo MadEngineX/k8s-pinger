@@ -3,12 +3,22 @@ entries:
   k8s-pinger:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-16T19:05:26.2064378+03:00"
+    created: "2021-04-16T19:13:48.6895676+03:00"
     description: A Helm chart for Kubernetes
-    digest: b46004338f0abf7bf31e20d2ba81d7083f103204b792768d2fa8c5ec049389d9
+    digest: 8cf20b2b6d7634e3b72161edf8c175df30558adc87608e85ae199f66bf49df58
     name: k8s-pinger
     type: application
     urls:
     - https://madenginex.github.io/k8s-pinger/k8s-pinger-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-16T19:05:26.2034357+03:00"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-04-16T19:13:48.690568+03:00"
+    description: A Helm chart for Kubernetes
+    digest: b46004338f0abf7bf31e20d2ba81d7083f103204b792768d2fa8c5ec049389d9
+    name: k8s-pinger
+    type: application
+    urls:
+    - https://madenginex.github.io/k8s-pinger/k8s-pinger-for-github/k8s-pinger-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-16T19:13:48.6885672+03:00"
