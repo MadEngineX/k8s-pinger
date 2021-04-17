@@ -1,7 +1,7 @@
 
 image:
-  repository: harbor.mybank/library/pinger
-  tag: v0.3
+  repository: ksxack/pinger
+  tag: v1.0
   pullPolicy: IfNotPresent
   pullSecrets: 
    - name: regcred
