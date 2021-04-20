@@ -1,6 +1,7 @@
 # k8s-pinger
 This is Helm-chart for Kubernetes Nodes pinger, which created by Flant. 
-ref: https://medium.com/flant-com/ping-monitoring-between-kubernetes-nodes-11e815f4eff1
+#
+(ref: https://medium.com/flant-com/ping-monitoring-between-kubernetes-nodes-11e815f4eff1)
 ##
 Steps for install pinger: 
 
