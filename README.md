@@ -35,4 +35,5 @@ prometheus-node-exporter:
 
 ##
 Dashboard
-https://drive.google.com/file/d/1WaQKcjyhLN-JXQhQeMo9F6blmhWRcy3J/view?usp=sharing
+![dashboard](https://github.com/MadEngineX/k8s-pinger/blob/main/docs/sda.png)
+
