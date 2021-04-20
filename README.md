@@ -21,8 +21,14 @@ In order for these metrics to get into Prometheus in the future, you need to set
 In my case (i use helm/kube-prometheus-stack) i've added this lane in values.yaml 
 
 ```
-prometheus-node-exporter.extraArgs:
+prometheus-node-exporter:
+  extraArgs:
     - --collector.textfile.directory=/host/textfile
+  extraHostVolumeMounts: 
+    - name: textfile
+      hostPath: /var/run/node-exporter-textfile
+      mountPath: /host/textfile
+      readOnly: true
 ```
 
 
