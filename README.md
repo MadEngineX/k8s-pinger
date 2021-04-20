@@ -7,7 +7,8 @@ helm repo add pinger https://madenginex.github.io/k8s-pinger/
 
 helm repo update
 
-helm upgrade --install k8s-pinger pinger/k8s-pinger -f .\k8s-pinger\values.yaml -n monitoring or other namespace ```
+helm upgrade --install k8s-pinger pinger/k8s-pinger -f .\k8s-pinger\values.yaml -n monitoring or other namespace 
+```
 
 
 
@@ -20,9 +21,9 @@ In order for these metrics to get into Prometheus in the future, you need to set
 In my case (i use helm/kube-prometheus-stack) i've added this lane in values.yaml 
 
 ```
-bash
 prometheus-node-exporter.extraArgs:
-    - --collector.textfile.directory=/host/textfile```
+    - --collector.textfile.directory=/host/textfile
+```
 
 
 Dashboard
