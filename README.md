@@ -37,3 +37,4 @@ prometheus-node-exporter:
 Dashboard
 ![dashboard](https://github.com/MadEngineX/k8s-pinger/blob/main/docs/sda.png)
 
+Dasboard JSON: https://github.com/MadEngineX/k8s-pinger/blob/main/docs/dashboard.json
