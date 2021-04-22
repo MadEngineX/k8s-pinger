@@ -9,7 +9,7 @@ helm repo add pinger https://madenginex.github.io/k8s-pinger/
 
 helm repo update
 
-helm upgrade --install k8s-pinger pinger/k8s-pinger -f .\k8s-pinger\values.yaml -n monitoring or other namespace 
+helm upgrade --install k8s-pinger pinger/k8s-pinger -f .\k8s-pinger\values.yaml -n monitoring ##or other namespace 
 ```
 
 
